@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push通知デモ</title>
+    <!-- crossorigin=”use-credentials”がないと、basic認証ありの場合エラーになる -->
+    <link rel="manifest" href="/manifest.json"  crossorigin="use-credentials">
+</head>
+<body>
+    <h1>Push通知デモ</h1>
+    <button id="subscribe-button">プッシュ通知を有効にする</button>
+
+    <!-- VAPID公開鍵とCSRFトークンを保持するための要素 -->
+    <div id="push-config"
+         data-vapid-public-key="BKbq_VQ7rTtTdlEuNYkXGquqt1_KMNUDifJqCpAcjkEu5BSt8EEm9y2oeYPRXd8kkXADxVw8BcWhljdBueWxbqY"
+         data-csrf-token="dummy">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
